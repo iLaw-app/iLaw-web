@@ -5,16 +5,19 @@
   background: linear-gradient(180deg, #88a54d 0%, #c1d39a 50%, #fdfff8 100%);
   overflow: hidden;
 }
+
+/* 원본: left 102 / bottom 146.94 / width 281 / height 347 (390 프레임 기준) → %로 환산 */
 .splash-logo {
   position: absolute;
-  left: 50%;
-  bottom: 30%;
-  transform: translateX(-50%);
-  width: 260px;
-  max-width: 72%;
+  left: 26%;
+  bottom: 17.4%;
+  width: 72%;
+  aspect-ratio: 281 / 347;
   height: auto;
   object-fit: contain;
 }
+
+/* 원본: paddingTop 170(web) / paddingHorizontal 36 */
 .splash-text {
   position: absolute;
   top: 20%;
@@ -31,7 +34,7 @@
   margin-bottom: 17px;
 }
 .splash-name {
-  font-size: 72px;
+  font-size: 75px;
   font-weight: 400;
   color: #fff;
   line-height: 72px;
