@@ -127,10 +127,9 @@ a {
     justify-content: center;
   }
   .app-frame {
-    width: auto;
-    height: min(94dvh, 880px);
-    aspect-ratio: 390 / 844;
-    max-width: 96vw;
+    width: 390px; /* 디자인 폭 고정 → 줌/창 크기와 무관하게 항상 같은 비율 */
+    height: 844px;
+    max-height: 94dvh; /* 창이 낮으면 줄이고 내부 스크롤 */
     border-radius: 32px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
   }
