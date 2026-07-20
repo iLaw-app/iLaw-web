@@ -1,0 +1,74 @@
+.manual-scroll {
+  padding: 0 0 80px;
+}
+.manual-header {
+  padding: 30px 20px 16px;
+}
+.manual-header h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 32px;
+  letter-spacing: 0.07px;
+  margin-bottom: 4px;
+}
+.manual-header p {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--text);
+  line-height: 32px;
+  letter-spacing: 0.07px;
+}
+.manual-list {
+  margin: 0 16px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.manual-card {
+  height: 80px;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: #fff;
+  text-align: left;
+}
+.manual-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  background: #dfedbe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.manual-card-text {
+  flex: 1;
+  padding: 0 14px;
+  display: flex;
+  flex-direction: column;
+}
+.manual-card-label {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 24px;
+  letter-spacing: -0.312px;
+}
+.manual-card-desc {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 24px;
+  letter-spacing: -0.312px;
+}
+.manual-card-divider {
+  height: 1px;
+  background: #f0f5e8;
+  margin: 0 20px;
+}

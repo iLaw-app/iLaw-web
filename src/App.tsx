@@ -3,6 +3,9 @@ import Splash from './routes/Splash';
 import Login from './routes/Login';
 import AuthCallback from './routes/AuthCallback';
 import Home from './routes/Home';
+import Manual from './routes/Manual';
+import ManualList from './routes/ManualList';
+import ManualDetail from './routes/ManualDetail';
 import QnaList from './routes/QnaList';
 import QnaDetail from './routes/QnaDetail';
 import Placeholder from './routes/Placeholder';
@@ -19,14 +22,14 @@ export default function App() {
 
         {/* 탭 */}
         <Route path="/home" element={<Home />} />
-        <Route path="/manual" element={<Placeholder title="매뉴얼" />} />
+        <Route path="/manual" element={<Manual />} />
         <Route path="/qna" element={<QnaList />} />
         <Route path="/community" element={<Placeholder title="커뮤니티" />} />
         <Route path="/profile" element={<Placeholder title="마이페이지" />} />
 
         {/* 매뉴얼 하위 */}
-        <Route path="/manual-list" element={<Placeholder title="매뉴얼 목록" showBack />} />
-        <Route path="/manual-detail" element={<Placeholder title="매뉴얼 상세" showBack showNav={false} />} />
+        <Route path="/manual-list" element={<ManualList />} />
+        <Route path="/manual-detail" element={<ManualDetail />} />
         <Route path="/manual-help" element={<Placeholder title="도움받기" showBack />} />
 
         {/* Q&A 하위 */}

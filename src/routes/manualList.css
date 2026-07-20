@@ -1,0 +1,122 @@
+.ml-header {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 30px 16px 12px;
+}
+.ml-header button {
+  display: flex;
+  align-items: center;
+}
+.ml-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.07px;
+}
+
+.ml-search-area {
+  flex-shrink: 0;
+  padding: 0 16px 10px;
+}
+.ml-search-box {
+  display: flex;
+  align-items: center;
+  height: 52px;
+  border-radius: 9999px;
+  border: 1.5px solid var(--border);
+  background: #fff;
+  padding: 0 10px 0 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.ml-search-box.active {
+  border-color: var(--primary-dark);
+}
+.ml-search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: #333;
+  height: 100%;
+}
+.ml-search-box input::placeholder {
+  color: var(--placeholder);
+}
+.ml-search-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ml-content {
+  padding: 4px 0 100px;
+}
+.ml-card {
+  margin: 4px 16px 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.ml-q {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  padding: 18px 20px;
+  text-align: left;
+}
+.ml-q-num {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 24px;
+  min-width: 28px;
+}
+.ml-q-text {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 24px;
+  letter-spacing: -0.312px;
+}
+.ml-divider {
+  height: 1px;
+  background: #f5f5f5;
+  margin: 0 20px;
+}
+.ml-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding-top: 60px;
+  color: #999;
+  font-size: 15px;
+}
+
+.ml-help {
+  position: absolute;
+  bottom: 100px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ff4444;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
