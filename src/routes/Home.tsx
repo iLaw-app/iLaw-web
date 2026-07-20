@@ -279,7 +279,7 @@ export default function Home() {
         </span>
       </div>
       <button className="home-aifab" onClick={() => navigate('/ai-chat')}>
-        <img className="aifab-base" src="/assets/chatbot_logo.png" alt="AI 챗봇" />
+        <img className="aifab-base" src="/assets/chatbot_logo.png" alt="AI 챗봇" style={{ opacity: winking ? 0 : 1 }} />
         <img className="aifab-wink" src="/assets/wink.png" alt="" style={{ opacity: winking ? 1 : 0 }} />
       </button>
 

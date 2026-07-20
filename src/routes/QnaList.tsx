@@ -69,7 +69,10 @@ export default function QnaList() {
       .then((data) => {
         if (cancelled) return;
         let list = Array.isArray(data) ? data : [];
-        if (SHOW_ONLY_LAWYER_QNA) list = list.filter((p) => isLawyerQuestion(p.title));
+        if (SHOW_ONLY_LAWYER_QNA) {
+          // 변호사 답변이 있는 5개만 노출 + 전부 답변완료로 표시 (백엔드 status가 pending이어도)
+          list = list.filter((p) => isLawyerQuestion(p.title)).map((p) => ({ ...p, status: 'answered' as const }));
+        }
         setPosts(list);
       })
       .catch(() => {
