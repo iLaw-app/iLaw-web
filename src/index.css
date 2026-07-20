@@ -78,15 +78,21 @@ body {
 body {
   font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', system-ui,
     -apple-system, sans-serif;
-  background: var(--bg);
+  background: #2e4a1c;
   color: var(--text);
   -webkit-font-smoothing: antialiased;
-  min-height: 100dvh;
+  overflow: hidden;
 }
 
-#root {
-  width: 100%;
-  min-height: 100dvh;
+/* 화면 전체 — 390x844 폰 캔버스를 가운데 두는 배경 */
+.app-viewport {
+  position: fixed;
+  inset: 0;
+  background: #2e4a1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 button {
@@ -102,37 +108,19 @@ a {
   text-decoration: none;
 }
 
-/* 모바일 우선: 화면을 꽉 채움 */
+/* 고정 390x844 캔버스 — JS가 창 크기에 맞춰 transform:scale로 축소 (Expo 웹과 동일).
+   어떤 폰/데스크탑에서든 같은 비율·같은 디자인으로 보임. */
 .app-frame {
-  position: relative;
-  width: 100%;
-  height: 100dvh;
+  width: 390px;
+  height: 844px;
+  flex: none;
+  transform-origin: center center;
   background: var(--bg);
+  border-radius: 40px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-}
-
-/* 데스크탑(넓은 화면): 폰 비율(390:844) 유지한 채 가운데 배치 */
-@media (min-width: 500px) {
-  body {
-    background: #e8ece2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #root {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .app-frame {
-    width: 390px; /* 디자인 폭 고정 → 줌/창 크기와 무관하게 항상 같은 비율 */
-    height: 844px;
-    max-height: 94dvh; /* 창이 낮으면 줄이고 내부 스크롤 */
-    border-radius: 32px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
-  }
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
 }
 
 /* 화면 공통: 세로 플렉스 + 내부 스크롤 */

@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Splash from './routes/Splash';
 import Login from './routes/Login';
@@ -10,9 +11,30 @@ import QnaList from './routes/QnaList';
 import QnaDetail from './routes/QnaDetail';
 import Placeholder from './routes/Placeholder';
 
+// 390x844 캔버스를 창 크기에 맞춰 균일하게 축소 (Expo 웹과 동일한 방식)
+function useCanvasScale() {
+  const [scale, setScale] = useState(1);
+  useEffect(() => {
+    const calc = () => {
+      const s = Math.min(window.innerWidth / 390, window.innerHeight / 844, 1);
+      setScale(s);
+    };
+    calc();
+    window.addEventListener('resize', calc);
+    window.visualViewport?.addEventListener('resize', calc);
+    return () => {
+      window.removeEventListener('resize', calc);
+      window.visualViewport?.removeEventListener('resize', calc);
+    };
+  }, []);
+  return scale;
+}
+
 export default function App() {
+  const scale = useCanvasScale();
   return (
-    <div className="app-frame" id="app-frame">
+    <div className="app-viewport">
+      <div className="app-frame" id="app-frame" style={{ transform: `scale(${scale})` }}>
       <Routes>
         {/* 진입 / 인증 */}
         <Route path="/" element={<Splash />} />
@@ -55,6 +77,7 @@ export default function App() {
 
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+      </div>
     </div>
   );
 }
