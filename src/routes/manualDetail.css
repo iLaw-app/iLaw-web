@@ -9,16 +9,18 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 30px 16px 12px;
+  padding: 42px 16px 12px;
 }
 .md-header button {
   display: flex;
   align-items: center;
+  padding: 4px;
 }
 .md-header h1 {
   font-size: 24px;
   font-weight: 700;
   color: var(--text);
+  line-height: 32px;
   letter-spacing: 0.07px;
 }
 .md-header-divider {
@@ -30,7 +32,7 @@
   flex-shrink: 0;
 }
 .md-content {
-  padding: 12px 20px 40px;
+  padding: 12px 20px 0;
 }
 .md-empty {
   font-size: 15px;
@@ -127,6 +129,10 @@
   border: none;
   margin: 12px 0;
 }
+.manual-html mark {
+  background: transparent;
+  color: #364153;
+}
 .manual-html img {
   max-width: 100%;
   height: auto;
@@ -182,6 +188,7 @@
   background: var(--primary-dark);
 }
 .md-scrap-count {
+  font-size: 14px;
   font-weight: 700;
   margin-left: 2px;
 }

@@ -238,9 +238,13 @@ export default function Home() {
             popular.slice(0, 3).map((p, i) => (
               <button key={`${p.type}-${p.id}`} className="home-reco-item" onClick={() => openPopular(p)}>
                 <span className="home-reco-num">{i + 1}</span>
-                <TypeIcon type={p.type} />
-                <span className="home-reco-badge">{p.category}</span>
-                <span className="home-reco-label">{p.label}</span>
+                <span className="home-reco-content">
+                  <span className="home-reco-meta">
+                    <TypeIcon type={p.type} />
+                    <span className="home-reco-badge">{p.category}</span>
+                  </span>
+                  <span className="home-reco-label">{p.label}</span>
+                </span>
               </button>
             ))
           )}
@@ -249,9 +253,20 @@ export default function Home() {
 
       {/* AI 챗봇 버튼 */}
       <div className="home-bubble">
-        챗봇 '아이로'에게
-        <br />
-        물어보세요!
+        <svg
+          width="115"
+          height="74"
+          viewBox="0 0 95 60"
+          style={{ filter: 'drop-shadow(0px 1px 1px rgba(0,0,0,0.25))' }}
+        >
+          <ellipse cx="46.5" cy="25" rx="45.5" ry="25" fill="white" />
+          <path d="M84.5596 54.0391L64.9844 40.0523L82.2344 30.093L84.5596 54.0391Z" fill="white" />
+        </svg>
+        <span className="home-bubble-text font-airo">
+          챗봇 '아이로'에게
+          <br />
+          물어보세요!
+        </span>
       </div>
       <button className="home-aifab" onClick={() => navigate('/ai-chat')}>
         <img src="/assets/chatbot_logo.png" alt="AI 챗봇" />

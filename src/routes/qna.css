@@ -1,24 +1,27 @@
 /* ===== 목록 화면 ===== */
 .qna-header {
   flex-shrink: 0;
-  padding: 30px 20px 2px;
+  padding: 46px 20px 2px;
 }
 .qna-header h1 {
   font-size: 22px;
   font-weight: 700;
   color: var(--text);
+  line-height: 32px;
   letter-spacing: 0.07px;
 }
 .qna-header p {
   font-size: 18px;
   font-weight: 300;
   color: var(--text);
+  line-height: 28px;
+  letter-spacing: 0.07px;
   margin-top: 2px;
 }
 
 .qna-search-area {
   flex-shrink: 0;
-  padding: 8px 16px 10px;
+  padding: 4px 16px 10px;
 }
 .qna-search-box {
   display: flex;
@@ -54,7 +57,7 @@
 }
 
 .qna-list {
-  padding: 4px 16px 20px;
+  padding: 0 16px 100px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -109,8 +112,8 @@
   font-size: 18px;
   font-weight: 700;
   color: var(--text);
-  line-height: 1.5;
-  letter-spacing: -0.44px;
+  line-height: 27px;
+  letter-spacing: -0.439px;
   margin-bottom: 6px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -120,7 +123,7 @@
 .qna-card-content {
   font-size: 14px;
   color: var(--text);
-  line-height: 1.43;
+  line-height: 20px;
   letter-spacing: -0.15px;
   margin-bottom: 8px;
   display: -webkit-box;
@@ -144,7 +147,7 @@
   gap: 4px;
 }
 .qna-meta .dot {
-  opacity: 0.6;
+  opacity: 1;
 }
 
 .qna-highlight {
@@ -172,13 +175,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.12);
   z-index: 5;
 }
 
 /* ===== 변호사 목록 ===== */
 .qna-lawyer-list {
-  padding: 4px 16px 20px;
+  padding: 0 16px 40px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -196,17 +199,20 @@
   margin-bottom: 12px;
   font-size: 20px;
   font-weight: 700;
+  line-height: 28px;
   letter-spacing: -0.449px;
 }
 .qna-section-empty {
   font-size: 14px;
   color: var(--placeholder);
   padding-left: 4px;
+  margin-bottom: 12px;
 }
 .qna-section-cards {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  margin-bottom: 8px;
 }
 
 /* ===== 상세 화면 ===== */

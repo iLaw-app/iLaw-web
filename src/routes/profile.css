@@ -1,5 +1,5 @@
 .profile-scroll {
-  padding: 16px 16px 40px;
+  padding: 46px 16px 40px;
 }
 
 .profile-title {
@@ -95,9 +95,6 @@
   height: 1px;
   background: #f0f5e8;
   margin: 0 18px;
-}
-.profile-version-row {
-  justify-content: flex-start;
 }
 .profile-version-text {
   font-size: 14px;

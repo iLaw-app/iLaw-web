@@ -8,6 +8,7 @@ import {
   IoNotificationsOutline,
   IoDocumentTextOutline,
   IoShieldCheckmarkOutline,
+  IoInformationCircleOutline,
 } from 'react-icons/io5';
 import type { IconType } from 'react-icons';
 import { useAuth } from '../context/AuthContext';
@@ -120,8 +121,12 @@ export default function Profile() {
             </div>
           ))}
           <div className="profile-menu-divider" />
-          <button className="profile-menu-row profile-version-row" onClick={handleVersionTap}>
-            <span className="profile-version-text">앱버전 v1.0.0</span>
+          <button className="profile-menu-row" onClick={handleVersionTap}>
+            <span className="profile-menu-left">
+              <IoInformationCircleOutline size={20} color="#586144" />
+              <span className="profile-menu-label">앱버전</span>
+            </span>
+            <span className="profile-version-text">v1.0.0</span>
           </button>
         </div>
       </div>

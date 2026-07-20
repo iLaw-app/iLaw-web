@@ -23,6 +23,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 8px 0;
   gap: 4px;
   color: var(--tab-inactive);
 }

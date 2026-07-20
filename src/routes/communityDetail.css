@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 16px 12px;
+  padding: 42px 16px 12px;
   border-bottom: 1px solid #f3f4f6;
   position: relative;
   z-index: 10;
@@ -28,7 +28,7 @@
 /* 작성자 드롭다운 (상단 우측) */
 .cd-dropdown {
   position: absolute;
-  top: 72px;
+  top: 84px;
   right: 16px;
   min-width: 120px;
   background: #fff;

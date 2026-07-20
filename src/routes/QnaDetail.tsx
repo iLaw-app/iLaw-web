@@ -10,6 +10,7 @@ import {
   IoBookmarkOutline,
   IoCreateOutline,
   IoTrashOutline,
+  IoCheckmark,
 } from 'react-icons/io5';
 import { qaApi } from '../api/qa';
 import type { QnADetail } from '../api/types';
@@ -30,6 +31,21 @@ function calcAge(birth?: string | null): number | null {
 
 const genderLabel = (g?: string | null) =>
   g === 'female' ? '여성' : g === 'male' ? '남성' : g === 'other' ? '기타' : '-';
+
+function ClockIcon() {
+  return (
+    <svg width={64} height={64} viewBox="0 0 64 64" fill="none">
+      <path
+        d="M31.9985 58.664C46.7255 58.664 58.664 46.7255 58.664 31.9985C58.664 17.2716 46.7255 5.33301 31.9985 5.33301C17.2716 5.33301 5.33301 17.2716 5.33301 31.9985C5.33301 46.7255 17.2716 58.664 31.9985 58.664Z"
+        stroke="#C10007" strokeWidth="5.3331" strokeLinecap="round" strokeLinejoin="round"
+      />
+      <path
+        d="M31.9985 15.999V31.9983L42.6647 37.3314"
+        stroke="#C10007" strokeWidth="5.3331" strokeLinecap="round" strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 export default function QnaDetail() {
   const { id } = useParams();
@@ -188,7 +204,6 @@ export default function QnaDetail() {
             </div>
           </div>
           <div className="qd-divider" />
-          <span className="qd-cat">{post.category}</span>
           <h2 className="qd-title">{post.title}</h2>
           <p className="qd-body">{post.content}</p>
           {post.imageUrls?.length > 0 && (
@@ -248,7 +263,7 @@ export default function QnaDetail() {
           )
         ) : post.status === 'pending' ? (
           <div className="qd-pending">
-            <div className="qd-clock">🕐</div>
+            <div className="qd-clock"><ClockIcon /></div>
             <div className="qd-pending-title">답변 대기 중</div>
             <p className="qd-pending-desc">
               변호사님이 질문을 검토하고 계세요.
@@ -291,7 +306,7 @@ export default function QnaDetail() {
       <Overlay visible={deleteOpen} onClose={() => setDeleteOpen(false)}>
         <div className="qd-modal">
           <div className="qd-modal-icon">
-            <IoTrashOutline size={30} color="#c10007" />
+            <IoTrashOutline size={32} color="#c10007" />
           </div>
           <div className="qd-modal-title">질문을 삭제할까요?</div>
           <p className="qd-modal-desc">삭제 후에는 복구할 수 없습니다.</p>
@@ -310,7 +325,7 @@ export default function QnaDetail() {
       <Overlay visible={successOpen}>
         <div className="qd-modal">
           <div className="qd-modal-icon success">
-            <IoCreateOutline size={30} color="#2b56b5" />
+            <IoCheckmark size={36} color="#fff" />
           </div>
           <div className="qd-modal-title">답변 완료!</div>
           <div className="qd-modal-btns">
@@ -368,6 +383,7 @@ function AnswerCard({
           </button>
         )}
       </div>
+      <div className="qd-answer-divider" />
       {editing ? (
         <>
           <textarea className="qd-edit-area" value={editText} onChange={(e) => onChange?.(e.target.value)} />

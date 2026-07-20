@@ -3,22 +3,24 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 30px 16px 12px;
+  padding: 42px 16px 12px;
 }
 .ml-header button {
   display: flex;
   align-items: center;
+  padding: 4px;
 }
 .ml-header h1 {
   font-size: 24px;
   font-weight: 700;
   color: var(--text);
+  line-height: 32px;
   letter-spacing: 0.07px;
 }
 
 .ml-search-area {
   flex-shrink: 0;
-  padding: 0 16px 10px;
+  padding: 10px 16px;
 }
 .ml-search-box {
   display: flex;
@@ -57,7 +59,7 @@
 }
 
 .ml-content {
-  padding: 4px 0 100px;
+  padding: 0 0 100px;
 }
 .ml-card {
   margin: 4px 16px 0;
@@ -79,6 +81,7 @@
   font-weight: 700;
   color: var(--text);
   line-height: 24px;
+  letter-spacing: -0.312px;
   min-width: 28px;
 }
 .ml-q-text {

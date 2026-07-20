@@ -6,7 +6,7 @@
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  padding: 30px 16px 12px;
+  padding: 42px 16px 12px;
 }
 .ns-back {
   display: flex;
@@ -20,7 +20,7 @@
 }
 
 .ns-list {
-  padding: 8px 16px;
+  padding: 8px 16px 0;
 }
 
 .ns-row {
