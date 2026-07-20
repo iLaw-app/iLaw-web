@@ -48,6 +48,7 @@ export default function Home() {
   const [popular, setPopular] = useState<PopularItem[]>([]);
   const [loadingPopular, setLoadingPopular] = useState(true);
   const [hasNoti, setHasNoti] = useState(false);
+  const [winking, setWinking] = useState(false);
 
   const [query, setQuery] = useState('');
   const [searching, setSearching] = useState(false);
@@ -69,6 +70,15 @@ export default function Home() {
         .catch(() => {});
     }
   }, [isAuthed]);
+
+  // 챗봇 윙크 애니메이션 (2.2초마다 220ms 동안 눈 깜빡)
+  useEffect(() => {
+    const iv = setInterval(() => {
+      setWinking(true);
+      setTimeout(() => setWinking(false), 220);
+    }, 2200);
+    return () => clearInterval(iv);
+  }, []);
 
   async function runSearch(q: string) {
     const term = q.trim();
@@ -269,7 +279,8 @@ export default function Home() {
         </span>
       </div>
       <button className="home-aifab" onClick={() => navigate('/ai-chat')}>
-        <img src="/assets/chatbot_logo.png" alt="AI 챗봇" />
+        <img className="aifab-base" src="/assets/chatbot_logo.png" alt="AI 챗봇" />
+        <img className="aifab-wink" src="/assets/wink.png" alt="" style={{ opacity: winking ? 1 : 0 }} />
       </button>
 
       <TabBar />

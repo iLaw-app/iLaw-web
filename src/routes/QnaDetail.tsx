@@ -13,6 +13,7 @@ import {
   IoCheckmark,
 } from 'react-icons/io5';
 import { qaApi } from '../api/qa';
+import { QNA_ITEMS } from '../data/qnaData';
 import type { QnADetail } from '../api/types';
 import { useAuth } from '../context/AuthContext';
 import { Overlay } from '../components/Overlay';
@@ -31,6 +32,17 @@ function calcAge(birth?: string | null): number | null {
 
 const genderLabel = (g?: string | null) =>
   g === 'female' ? '여성' : g === 'male' ? '남성' : g === 'other' ? '기타' : '-';
+
+// 백엔드엔 변호사님 답변 본문/소속이 비어 있어서, 그 5개 질문은 정적 데이터로 채워 넣음 (화면 표시용).
+const LAWYER_KEY = ['통금', '주휴수당', '인스타', '무관심', '경찰조사'];
+function staticLawyerAnswer(title: string) {
+  const t = (title ?? '').replace(/\s/g, '');
+  const item = QNA_ITEMS.find((q) => {
+    const qt = q.title.replace(/\s/g, '');
+    return t.includes(qt) || qt.includes(t) || LAWYER_KEY.some((k) => t.includes(k) && qt.includes(k));
+  });
+  return item?.answer ?? null;
+}
 
 function ClockIcon() {
   return (
@@ -74,8 +86,25 @@ export default function QnaDetail() {
       .get(id!)
       .then((data) => {
         if (cancelled) return;
-        setPost(data);
-        setScrapCount(data.answer ? 0 : 0);
+        // 변호사님 답변이 있는 5개 질문은 정적 데이터로 답변 본문+소속을 채움
+        const sa = staticLawyerAnswer(data.title);
+        const merged: QnADetail = sa
+          ? {
+              ...data,
+              status: 'answered',
+              answer: {
+                id: data.answer?.id ?? 0,
+                postId: data.id,
+                lawyerId: null,
+                content: sa.content,
+                createdAt: sa.createdAt,
+                updatedAt: sa.createdAt,
+                lawyer: { nickname: sa.lawyerName, role: 'lawyer', affiliation: sa.lawyerOrg },
+                isMyAnswer: false,
+              },
+            }
+          : data;
+        setPost(merged);
       })
       .catch(() => !cancelled && setNotFound(true))
       .finally(() => !cancelled && setLoading(false));
