@@ -76,8 +76,8 @@ body {
 }
 
 body {
-  font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', system-ui,
-    -apple-system, sans-serif;
+  font-family: 'AiroFont', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR',
+    system-ui, -apple-system, sans-serif;
   background: #2e4a1c;
   color: var(--text);
   -webkit-font-smoothing: antialiased;
@@ -95,8 +95,14 @@ body {
   overflow: hidden;
 }
 
-button {
+button,
+input,
+textarea,
+select {
   font-family: inherit;
+}
+
+button {
   cursor: pointer;
   border: none;
   background: none;

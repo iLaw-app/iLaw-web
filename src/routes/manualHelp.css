@@ -1,0 +1,380 @@
+.mh {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+/* ─── 헤더 ─── */
+.mh-header {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  padding: 30px 16px 12px;
+}
+.mh-back {
+  padding: 4px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+}
+.mh-title {
+  flex: 1;
+  font-size: 22px;
+  font-weight: 700;
+  color: #586144;
+  line-height: 32px;
+  letter-spacing: 0.07px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mh-content {
+  padding: 20px 20px 40px;
+}
+
+.mh-section-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #586144;
+  line-height: 20px;
+  letter-spacing: -0.15px;
+  margin-bottom: 10px;
+}
+
+/* ─── 지역 선택 버튼 ─── */
+.mh-region-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.mh-region-btn-text {
+  font-size: 14px;
+  color: #586144;
+  font-weight: 500;
+}
+
+/* ─── 긴급 신고 박스 ─── */
+.mh-emergency-box {
+  background: #FFF5F5;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.mh-emergency-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.mh-emergency-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #C10007;
+  line-height: 27px;
+  letter-spacing: -0.439px;
+}
+.mh-emergency-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 0;
+  width: 100%;
+  text-align: left;
+}
+.mh-emergency-line {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 700;
+  color: #586144;
+  line-height: 24px;
+  letter-spacing: -0.312px;
+}
+.mh-emergency-label {
+  font-weight: 700;
+}
+
+/* ─── 기관 카드 ─── */
+.mh-center-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.mh-center-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #586144;
+  line-height: 27px;
+  letter-spacing: -0.439px;
+  margin-bottom: 4px;
+}
+.mh-role-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8C937D;
+  line-height: 22.75px;
+  letter-spacing: -0.15px;
+  margin-bottom: 8px;
+}
+.mh-phone-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.mh-phone-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #3C6802;
+  line-height: 20px;
+  letter-spacing: -0.15px;
+}
+
+.mh-spinner-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.mh-empty {
+  text-align: center;
+  color: #999;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+/* ─── 지역 선택 모달 ─── */
+.mh-region-card {
+  width: 326px;
+  max-width: 100%;
+  max-height: 480px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+}
+.mh-region-modal-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.mh-region-list {
+  overflow-y: auto;
+}
+.mh-region-option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 8px;
+  border-bottom: 1px solid #f5f5f5;
+}
+.mh-region-option.active {
+  background: #F4F8EE;
+  border-radius: 8px;
+}
+.mh-region-option-text {
+  font-size: 14px;
+  color: #444;
+}
+.mh-region-option-text.active {
+  color: #3C6802;
+  font-weight: 700;
+}
+
+/* ─── 전화 모달 1단계 ─── */
+.mh-modal-card {
+  width: 345px;
+  max-width: 100%;
+  background: #FFF;
+  border-radius: 24px;
+  border: 1.356px solid #FFF;
+  padding: 24px;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+}
+.mh-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.mh-modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #586144;
+  line-height: 28px;
+  letter-spacing: -0.449px;
+}
+.mh-icon-btn {
+  display: flex;
+  align-items: center;
+}
+.mh-modal-center-name {
+  font-size: 16px;
+  font-weight: 400;
+  color: #586144;
+  line-height: 24px;
+  letter-spacing: -0.312px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mh-modal-phone {
+  font-size: 26px;
+  font-weight: 700;
+  color: #586144;
+  margin-bottom: 16px;
+}
+.mh-modal-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mh-tips-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 9999px;
+  background: #5A7B10;
+  padding: 13px 0;
+  align-self: stretch;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+.mh-tips-btn-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFF;
+  line-height: 24px;
+  letter-spacing: -0.312px;
+}
+
+.mh-call-btn {
+  background: #B2D36E;
+  padding: 14px 0;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+.mh-call-btn-text {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* ─── 전화 모달 2단계 ─── */
+.mh-tips-card {
+  width: 358px;
+  max-width: 100%;
+  height: 90vh;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #FFF;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+}
+.mh-tips-card-top {
+  flex-shrink: 0;
+  padding: 24px 20px 4px;
+}
+.mh-tips-scroll {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 8px 16px 16px;
+}
+.mh-tips-card-bottom {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+}
+
+.mh-big-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 16px;
+  border: 1.532px solid #F3F4F6;
+  background: #F3F4F6;
+  padding: 16px;
+}
+.mh-tips-hint {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.mh-tips-hint-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #586144;
+  line-height: 22px;
+  letter-spacing: -0.3px;
+}
+.mh-tips-hint-sub {
+  font-size: 15px;
+  font-weight: 400;
+  color: #586144;
+  line-height: 25px;
+}
+
+.mh-tips-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.mh-tips-field-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #586144;
+  line-height: 20px;
+  letter-spacing: -0.15px;
+}
+.mh-tips-field-input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 46px;
+  background: #FFF;
+  border-radius: 14px;
+  border: 1.532px solid #F3F4F6;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #0a0a0a;
+  letter-spacing: -0.15px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.06);
+}
+.mh-tips-field-input.large {
+  height: 92px;
+  resize: none;
+  vertical-align: top;
+}
+.mh-tips-field-input::placeholder {
+  color: rgba(10, 10, 10, 0.30);
+}

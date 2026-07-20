@@ -1,0 +1,109 @@
+.noti {
+  background: var(--bg);
+}
+
+.noti-header {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 30px 16px 12px;
+}
+.noti-back {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.noti-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 32px;
+  letter-spacing: 0.07px;
+}
+
+.noti-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 8px 20px 100px;
+}
+
+.noti-card {
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  padding: 17.5px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.noti-icon {
+  display: flex;
+  margin-right: 14px;
+  padding-top: 4px;
+  flex-shrink: 0;
+}
+
+.noti-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.noti-title-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.noti-card-title {
+  flex: 1;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 27px;
+  letter-spacing: -0.439px;
+}
+.noti-unread-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background: #f44336;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.noti-desc {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+  line-height: 20px;
+  letter-spacing: -0.15px;
+  margin-bottom: 6px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.noti-date {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 16px;
+}
+
+.noti-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 80px;
+}
+.noti-empty-text {
+  font-size: 14px;
+  color: var(--placeholder);
+}

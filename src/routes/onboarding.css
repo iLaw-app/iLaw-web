@@ -1,0 +1,156 @@
+.ob-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 47px 85px;
+}
+
+.ob-logo {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+.ob-subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #586144;
+  text-align: center;
+  line-height: 24px;
+  margin-bottom: 28px;
+}
+
+.ob-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+.ob-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #3c6802;
+  line-height: 20px;
+  letter-spacing: -0.15px;
+  margin-bottom: 6px;
+}
+.ob-input {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: #fff;
+  font-size: 15px;
+  color: #1a1a1a;
+  font-family: inherit;
+  outline: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.ob-input::placeholder {
+  color: #bbb;
+}
+.ob-input-error {
+  border-color: #f44336;
+}
+.ob-error-text {
+  font-size: 12px;
+  color: #f44336;
+  margin-top: 4px;
+}
+.ob-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23ccc' stroke-width='2'><polyline points='9 18 15 12 9 6'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+}
+.ob-select-placeholder {
+  color: #bbb;
+}
+.ob-date-empty {
+  color: #bbb;
+}
+
+.ob-gender-row {
+  display: flex;
+  gap: 10px;
+}
+.ob-gender-btn {
+  flex: 1;
+  padding: 13px 8px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: #fff;
+  font-size: 14px;
+  color: #888;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.ob-gender-btn.active {
+  background: #f4faed;
+  color: #3c6802;
+  font-weight: 600;
+}
+
+.ob-agree-box {
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+.ob-agree-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 0;
+  text-align: left;
+}
+.ob-checkbox {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 1.5px solid #ddd;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.ob-checkbox.active {
+  background: #b2d36e;
+  border-color: #b2d36e;
+}
+.ob-checkmark {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+.ob-agree-all-text {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+.ob-agree-text {
+  font-size: 13px;
+  color: #555;
+}
+.ob-divider {
+  height: 1px;
+  background: #f0f0f0;
+  margin: 4px 0;
+}
+
+.ob-submit {
+  width: 100%;
+  height: 56px;
+  border-radius: 9999px;
+  background: #b2d36e;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+.ob-submit:disabled {
+  opacity: 0.6;
+}

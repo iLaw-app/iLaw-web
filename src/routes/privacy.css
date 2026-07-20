@@ -1,0 +1,132 @@
+.privacy {
+  background: var(--bg);
+}
+
+.privacy-header {
+  display: flex;
+  align-items: center;
+  padding: 30px 16px 12px;
+  border-bottom: 1px solid #f3f4f6;
+}
+.privacy-back {
+  padding: 4px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+}
+.privacy-header-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #586144;
+}
+
+.privacy-content {
+  padding: 20px 20px 0;
+}
+
+.privacy-h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #586144;
+  line-height: 30px;
+  margin: 0 0 16px;
+}
+.privacy-h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #586144;
+  line-height: 26px;
+  margin: 8px 0;
+}
+.privacy-h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #586144;
+  margin: 6px 0;
+}
+.privacy-p {
+  font-size: 14px;
+  color: #4a5565;
+  line-height: 22px;
+  margin: 0 0 8px;
+  white-space: pre-line;
+}
+.privacy-divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 16px 0;
+}
+
+.privacy-list {
+  margin-bottom: 8px;
+}
+.privacy-list-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 6px;
+}
+.privacy-list-num {
+  font-size: 14px;
+  color: #586144;
+  font-weight: 600;
+  width: 24px;
+  flex: none;
+  margin-top: 1px;
+}
+.privacy-list-bullet {
+  font-size: 14px;
+  color: #586144;
+  width: 16px;
+  flex: none;
+  margin-top: 1px;
+}
+.privacy-list-text {
+  flex: 1;
+  font-size: 14px;
+  color: #4a5565;
+  line-height: 22px;
+  white-space: pre-line;
+}
+
+/* 표 */
+.privacy-table {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+.privacy-table-row {
+  display: flex;
+  border-bottom: 1px solid #e5e7eb;
+}
+.privacy-table-row:last-child {
+  border-bottom: none;
+}
+.privacy-table-header {
+  background: #eff4e6;
+}
+.privacy-table-row-alt {
+  background: #f9fbf5;
+}
+.privacy-table-cell {
+  font-size: 13px;
+  color: #4a5565;
+  line-height: 20px;
+  padding: 8px 10px;
+}
+.privacy-table-cell-left {
+  width: 110px;
+  flex: none;
+  border-right: 1px solid #e5e7eb;
+}
+.privacy-table-cell-right {
+  flex: 1;
+}
+.privacy-table-header-text {
+  font-weight: 700;
+  color: #586144;
+}
+.privacy-table-cell-label {
+  font-weight: 600;
+  color: #586144;
+}

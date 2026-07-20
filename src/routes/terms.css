@@ -1,0 +1,173 @@
+.terms {
+  background: var(--bg);
+}
+
+.terms-header {
+  display: flex;
+  align-items: center;
+  padding: 30px 16px 12px;
+  border-bottom: 1px solid #f3f4f6;
+}
+.terms-back {
+  padding: 4px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+}
+.terms-header-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #586144;
+}
+
+.terms-content {
+  padding: 20px 20px 0;
+}
+
+.terms-h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #586144;
+  line-height: 30px;
+  margin: 0 0 16px;
+}
+.terms-h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #586144;
+  line-height: 26px;
+  margin: 8px 0;
+}
+.terms-h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #586144;
+  margin: 6px 0;
+}
+.terms-p {
+  font-size: 14px;
+  color: #4a5565;
+  line-height: 22px;
+  margin: 0 0 8px;
+  white-space: pre-line;
+}
+.terms-divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 16px 0;
+}
+
+.terms-list {
+  margin-bottom: 8px;
+}
+.terms-list-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 6px;
+}
+.terms-list-num {
+  font-size: 14px;
+  color: #586144;
+  font-weight: 600;
+  width: 24px;
+  flex: none;
+  margin-top: 1px;
+}
+.terms-list-bullet {
+  font-size: 14px;
+  color: #586144;
+  width: 16px;
+  flex: none;
+  margin-top: 1px;
+}
+.terms-list-text {
+  flex: 1;
+  font-size: 14px;
+  color: #4a5565;
+  line-height: 22px;
+  white-space: pre-line;
+}
+
+.terms-withdraw-section {
+  margin-top: 16px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.terms-withdraw-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #c10007;
+}
+.terms-withdraw-desc {
+  font-size: 13px;
+  color: #6a7282;
+  text-align: center;
+  line-height: 20px;
+}
+.terms-withdraw-btn {
+  margin-top: 4px;
+  padding: 10px 24px;
+  border-radius: 9999px;
+  border: 1px solid #c10007;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  color: #c10007;
+  cursor: pointer;
+}
+
+/* 탈퇴 모달 */
+.terms-modal-card {
+  width: 100%;
+  max-width: 361px;
+  border-radius: 24px;
+  border: 1.356px solid #fff;
+  background: #fff;
+  padding: 25.504px 25px 18.471px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14.025px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+.terms-modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #4a5565;
+  line-height: 28px;
+  letter-spacing: -0.449px;
+  text-align: center;
+}
+.terms-modal-body {
+  font-size: 14px;
+  color: #364153;
+  line-height: 22px;
+  text-align: center;
+  white-space: pre-line;
+}
+.terms-modal-danger-btn {
+  width: 209px;
+  height: 36px;
+  border-radius: 14px;
+  border: none;
+  background: #fb2c36;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.terms-modal-confirm-btn {
+  width: 209px;
+  height: 36px;
+  border-radius: 14px;
+  border: none;
+  background: #b2d36e;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
