@@ -1,9 +1,17 @@
+@font-face {
+  font-family: 'AiroFont';
+  src: url('/assets/font.ttf') format('truetype');
+  font-weight: normal;
+  font-display: swap;
+}
+
 :root {
   /* 원본 앱 팔레트 (airo-app에서 가져옴) */
   --bg: #fdfff8;
   --text: #586144;
   --primary: #678720;
   --primary-dark: #3c6802;
+  --accent: #b2d36e; /* CTA 버튼 */
   --border: #ccd9ba;
   --badge-bg: #edf5e1;
   --badge-text: #3c6802;
@@ -12,11 +20,48 @@
   --pending-bg: #fef2f2;
   --pending-text: #c10007;
   --placeholder: #9caf88;
+  --muted: #8c937d;
   --card-bg: #ffffff;
   --tab-inactive: #6a7282;
   --meta: #586144;
+  --divider: #f0f5e8;
+  --danger: #c10007;
+  --tag-green: #678720;
+  --fill-green: #eff4e1;
+  --field-bg: #f9fafb;
 
   --app-max-width: 400px;
+}
+
+.font-airo {
+  font-family: 'AiroFont', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+}
+
+.hl-mark {
+  background: #e0e0e0;
+  color: inherit;
+}
+
+/* 전체 화면 로딩 스피너 */
+.spinner {
+  width: 34px;
+  height: 34px;
+  border: 3px solid var(--border);
+  border-top-color: var(--primary-dark);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+.spinner-center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 * {

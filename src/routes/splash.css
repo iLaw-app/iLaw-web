@@ -1,0 +1,39 @@
+.splash {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  background: linear-gradient(180deg, #88a54d 0%, #c1d39a 50%, #fdfff8 100%);
+  overflow: hidden;
+}
+.splash-logo {
+  position: absolute;
+  left: 50%;
+  bottom: 30%;
+  transform: translateX(-50%);
+  width: 260px;
+  max-width: 72%;
+  height: auto;
+  object-fit: contain;
+}
+.splash-text {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  padding: 0 36px;
+}
+.splash-tagline {
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 32px;
+  letter-spacing: 0.07px;
+  margin-bottom: 17px;
+}
+.splash-name {
+  font-size: 72px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 72px;
+  letter-spacing: 0.123px;
+}
