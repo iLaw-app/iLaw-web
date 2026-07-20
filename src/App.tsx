@@ -16,8 +16,9 @@ function useCanvasScale() {
   const [scale, setScale] = useState(1);
   useEffect(() => {
     const calc = () => {
-      const s = Math.min(window.innerWidth / 390, window.innerHeight / 844, 1);
-      setScale(s);
+      // 높이를 꽉 채우되 위아래 약간(24px)만 여백 — 폭이 좁으면 폭 기준
+      const s = Math.min(window.innerWidth / 390, (window.innerHeight - 24) / 844);
+      setScale(s > 0.1 ? s : 0.1);
     };
     calc();
     window.addEventListener('resize', calc);
