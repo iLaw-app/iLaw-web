@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import Splash from './routes/Splash';
 import Login from './routes/Login';
 import AuthCallback from './routes/AuthCallback';
+import Home from './routes/Home';
 import QnaList from './routes/QnaList';
 import QnaDetail from './routes/QnaDetail';
 import Placeholder from './routes/Placeholder';
@@ -17,7 +18,7 @@ export default function App() {
         <Route path="/onboarding" element={<Placeholder title="온보딩" showNav={false} />} />
 
         {/* 탭 */}
-        <Route path="/home" element={<Placeholder title="홈" />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/manual" element={<Placeholder title="매뉴얼" />} />
         <Route path="/qna" element={<QnaList />} />
         <Route path="/community" element={<Placeholder title="커뮤니티" />} />

@@ -176,6 +176,39 @@
   z-index: 5;
 }
 
+/* ===== 변호사 목록 ===== */
+.qna-lawyer-list {
+  padding: 4px 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.qna-section {
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 16px;
+}
+.qna-section-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.449px;
+}
+.qna-section-empty {
+  font-size: 14px;
+  color: var(--placeholder);
+  padding-left: 4px;
+}
+.qna-section-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 /* ===== 상세 화면 ===== */
 .qna-detail {
   height: 100%;
