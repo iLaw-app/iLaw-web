@@ -76,8 +76,9 @@ body {
 }
 
 body {
-  font-family: 'AiroFont', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR',
-    system-ui, -apple-system, sans-serif;
+  /* 원본 Expo 웹과 동일한 시스템 폰트 스택 (윈도우=맑은고딕 / 맥=애플 SD 산돌고딕) */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo',
+    'Malgun Gothic', Roboto, Helvetica, Arial, sans-serif;
   background: #2e4a1c;
   color: var(--text);
   -webkit-font-smoothing: antialiased;
